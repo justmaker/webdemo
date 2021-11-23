@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tx{
+            width: 100%;
+            height: 300px;
+            display: none;
+        }
+
+        .tx1{
+            background-color: #faa;
+        }
+        .tx2{
+            background-color: #aaf;
+        }
+
+        @media screen and (min-width: 768px){
+            .tx{
+                width: 50%;
+                float: left;
+                display: block;
+            }
+            .tx1{
+                background-color: #00f;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .tx1{
+                background-color: #f00;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="tx tx1">tx1</div>
+    <div class="tx tx2">tx2</div>
+
+</body>
+</html>

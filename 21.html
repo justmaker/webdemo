@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            vertical-align: bottom;
+        }
+        .item-group{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .title{
+            margin: 0 0px 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+        }
+        .title h2{
+            text-align: center;
+            font-style: 46px;
+        }
+        .title p{
+            font-style: 22px;
+        }
+        .item{
+            margin: 0 10px 0px;
+        }
+        .item .text h3{
+            font-style: 24px;
+            text-align: center;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+        .footer{
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .service{
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        @media screen and (min-width: 768px) {
+            .item-group{
+                display:flex;
+            }
+            .service .item{
+                display: flex;
+            }
+            .service .item .pic,
+            .service .item .text{
+                width: 50%;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+        }
+        #menu_control{
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        .header{
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .logo{
+            width: 60px;
+            height: 40px;
+            margin-left: 10px;
+        }
+        .logo img{
+            display: block;
+        }
+        .menu_btn{
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        .menu_btn span{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        .menu_btn::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0 8px 0 #aaa,
+                        0 -8px 0 #aaa;
+        }
+        nav{
+            width: 80%;
+            height: calc(100vh - 50px);
+            background-color: #000;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+        nav a{
+            display: block;
+            text-decoration: none;
+            color: #0ff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #0ff;
+        }
+        #menu_control:checked ~ .header nav{
+            left: 0;
+        }
+        @media screen and (min-width: 768px) {
+            .menu_btn { display: none; }
+            .header{ 
+                display: flex;
+                justify-content: space-between; 
+                background-color: #000;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                top: 0;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+            }
+            nav a{
+                border-bottom: none;
+                color: rgb(179, 255, 213);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40/?random=1"></a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>list</span>
+        </label>
+        <nav>
+            <a href="#">連結</a>
+            <a href="#">連結</a>
+            <a href="#">連結</a>
+            <a href="#">連結</a>
+            <a href="#">連結</a>
+            <a href="#">連結</a>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="https://picsum.photos/1400/500/?random=1">
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla odit maiores! Nisi rem aut dignissimos similique sequi, nihil incidunt.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=11"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=12"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=13"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=33"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla odit maiores! Nisi rem aut dignissimos similique sequi, nihil incidunt.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=21"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=22"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic"><img src="https://picsum.photos/300/200/?random=23"></div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur incidunt voluptas, expedita quam quod ad hic assumenda id molestias odit ut sapiente aliquid fuga amet suscipit accusamus eaque? Possimus aliquid debitis eveniet exercitationem consequuntur adipisci nihil repellat, ratione error aspernatur?
+                        一天打印大全最快裝飾平衡此時引用增長，開發商未知，周邊通知都市簡直過程全市讓我生氣第二高級措施，是他一時是在完全簡介有限，其實階段再次手續亞洲承擔案例查找日誌庫存紛紛廠家，受傷社會主義以上武器女朋友新型電源武器玻璃留言，都說軟體購物眾多日前宣佈相關內容意。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copyright 2021 by justcss
+    </div>
+
+</body>
+</html>
